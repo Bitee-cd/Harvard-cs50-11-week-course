@@ -1,0 +1,10 @@
+ ask for input from user
+ re prompt the question if the user doesnt give a postive integer from one to eight
+
+start a for loop for each line depending on the number the user inserts
+    a for loop to print the number of first spaces in each line
+    a for loop to print the number of first set of # in the line
+    a for loop to print the middle spaces for the line
+    a for loop to print the last set of # in the line
+    move to the next line 
+end the for loop 
