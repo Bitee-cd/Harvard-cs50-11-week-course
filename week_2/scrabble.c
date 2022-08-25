@@ -15,21 +15,23 @@ int main(void)
  
     // variables declaration
     int i,sum_of_word=0,number;
-    char upper;
+    char upper='j';
+    i = ((upper)+(1%26));
+    printf("%c",(i));
 
-    //loop over the given string
-    for(i=0;i<strlen(word);i++)
-    {
-        //convert to uppercase
-        upper =tolower(word[i]);
-        // check and use for only alphabets
-        if(upper>='a' && upper<='z')
-        {
-            //find the position of the number in the alphabet
-           number = (upper - 'a') +1;
-            //use position as index to find the number in points array and add to sum
-           sum_of_word += POINTS[number-1];
-        }
-    }
-    printf("%d",sum_of_word);
+    // //loop over the given string
+    // for(i=0;i<strlen(word);i++)
+    // {
+    //     //convert to uppercase
+    //     upper =tolower(word[i]);
+    //     // check and use for only alphabets
+    //     if(upper>='a' && upper<='z')
+    //     {
+    //         //find the position of the number in the alphabet
+    //        number = (upper - 'a') +1;
+    //         //use position as index to find the number in points array and add to sum
+    //        sum_of_word += POINTS[number-1];
+    //     }
+    // }
+    // printf("%d",sum_of_word);
 }

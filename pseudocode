@@ -1,0 +1,10 @@
+compute string function
+    loop over the string taking one character at a time
+    covert the string to uppercase
+    check if the character is an alphabet between a and z
+        find the position of the alphabet in integer
+        add the sum_of_words to the value in points array using the index found in step 5 above
+    return sum_of_words
+
+find maximum of sums and print the highest player wins
+if equal print its a tiee
