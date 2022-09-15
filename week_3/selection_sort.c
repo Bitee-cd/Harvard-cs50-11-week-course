@@ -14,17 +14,19 @@ int main()
     {
         int smallest = i;
         // loop through the inner array, find smallest and swap
-        for (int j = i+1; j<size - i-1; j++)
+        for (int j = i+1; j<size; j++)
         {
             if (array_m[j] < array_m[smallest])
             {
                 smallest = j;
             }
         }
-        int temp = array_m[smallest];
-        array_m[smallest]= array_m[i];
-        array_m[i]=temp;
-
+        if (smallest != i)
+        {
+        int temp = array_m[i];
+        array_m[i]= array_m[smallest];
+        array_m[smallest]=temp;
+        }
     }
 
     //loop through sorted array and print out
