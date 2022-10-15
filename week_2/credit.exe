@@ -1,0 +1,22 @@
+get input from the user
+    reprompt if the input is not a valid integer
+
+valid_card()
+loop through the number gotten from user
+    create an array of the individual digits
+    initiate sum = 0
+    start a for loop from the n-1th element with a gap of -2
+        multiply the number by 2
+        add to the sum
+    check if the modulus by 10 of the sum is 0;
+        return true
+if valid card is true
+    if first digit of the card is 3
+        if second digit is 4
+            return AMEX
+    if first digit of the card is 4
+        return VISA
+    if first digit of the card is 5
+        if the second digit is 1,2,3 or 4
+            return MasterCard
+    else return INVALID
