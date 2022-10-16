@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main(void){
     int number ;
-    int array[7] = {2,4,5,2,4,2,2};
+    int array[7] = {2,4,2,2,4,2,2};
 
     int min =2;
     for (int i = 0;i<7;i++)
@@ -21,9 +21,14 @@ for (int i = 0;i<7;i++)
 
       if(array[i] != number)
         {
+    
         printf("number not correct\n");
         printf("%i",array[i]);
         break;
+        }
+        else{
+            printf("it is a tie");
+            break;
         }
         
     }

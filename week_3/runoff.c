@@ -210,40 +210,25 @@ int find_min(void)
 // Return true if the election is tied between all candidates, false otherwise
 bool is_tie(int min)
 {
-    int tie_number;
-    //loop through candidates struct array and set the first different number than the min
-    for (int i = 0; i < candidate_count; i++)
+    int tieCount = 0;
+    int onRun = 0;
+for (int c = 0; c < candidate_count; c++)
     {
-        //check if candidate has been eliminated
-        if (!candidates[i].eliminated)
+        if (candidates[c].eliminated == false && candidates[c].votes == min)
         {
-            //check if the number of votes is thesame as min
-            if (candidates[i].votes != min)
-            {
-                //assign a value for the other number
-                tie_number = candidates[i].votes;
-                break;
-            }
+            tieCount++;
+            onRun++;
+        }
+        else if (candidates[c].eliminated == false)
+        {
+            onRun++;
         }
     }
-    // loop through the array and see if there is any other number apart min and tie number
-    for (int i; i < candidate_count; i++)
+    if (tieCount == onRun)
     {
-        //check if candidate has been eliminated
-        if (!candidates[i].eliminated)
-        {
-            if (!(candidates[i].votes == min))
-            {
-
-                if(!(candidates[i].votes != tie_number))
-                {
-                    return false;
-                    break;
-                }
-            }
-        }
+        return true;
     }
-    return true;
+    return false;
 }
 
 // Eliminate the candidate (or candidates) in last place
